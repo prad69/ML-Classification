@@ -1,0 +1,69 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.App-header {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.App-header h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+.App-header p {
+  margin: 0.5rem 0 0 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.App-content {
+  display: flex;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+
+.App-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.App-sidebar {
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.btn-new-application {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-new-application:hover {
+  background: #5568d3;
+}
+
+@media (max-width: 1024px) {
+  .App-content {
+    flex-direction: column;
+  }
+
+  .App-sidebar {
+    width: 100%;
+  }
+}
