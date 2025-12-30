@@ -56,8 +56,14 @@ async def startup_event():
     # Load model and explainer
     try:
         explainer = LoanExplainer()
+
+        # Load and fit preprocessor with training data
         preprocessor = KaggleLoanPreprocessor()
+        train_data = pd.read_csv(BASE_DIR / "data" / "raw" / "kaggle_loan" / "train.csv")
+        _ = preprocessor.preprocess(train_data, is_train=True)  # Fit the preprocessor
+
         print("✓ Model and explainer loaded successfully")
+        print("✓ Preprocessor fitted")
     except Exception as e:
         print(f"✗ Error loading model: {e}")
         raise
